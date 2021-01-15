@@ -21,11 +21,21 @@ file_handler.setLevel(logging.DEBUG)
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 
+
+### Reset du fichier log
+my_txt_file= open("log.txt", "r+")    
+# to erase all data  
+my_txt_file.truncate() 
+# to close file
+my_txt_file.close() 
+
+
 logger.info("Start log")
 
-my_word='maison'
+my_word='evidemment'
 error_count=0
 test_letter=0
+word_complete=0
 my_word_empty=[]
 
 def test_letter_function(user_letter,game_word):
@@ -38,18 +48,26 @@ def test_letter_function(user_letter,game_word):
     logger.info("L'utilisateur n'a pas entré une lettre valide")
     return number
 
+def test_full_word (my_current_list):       
+    for item in my_current_list: 
+        cnt = 0
+        if item == '_':
+            logger.info("Le mot n'a pas été trouvé totalement")
+            cnt = 0
+            return cnt
+    cnt = 1
+    logger.info("Le mot a été trouvé totalement")
+    return cnt
+
 my_word_as_list=list(my_word)
 b=0
 for b in range(len(my_word)):
     my_word_empty.append('_')
 
-print(my_word_empty)
-
-
 #Affichage du mot vide
 i=0
 for i in range(len(my_word)):
-    print("__ ", end='')
+    print("_ ", end='')
 
 logger.info("le mot à trouver est:")
 logger.info(my_word)
@@ -57,17 +75,16 @@ logger.info(my_word)
 
     
 
-while error_count < 5 :
-
-    my_letter = input("\nEntrer une lettre:")
+while (error_count < 5) and (word_complete <1) :
+    my_letter = input("\n\nEntrer une lettre:")
     logger.info("la lettre de l'user est:")
     logger.info(my_letter)
 
     test_letter= test_letter_function(my_letter,my_word)
 
-    if(test_letter==0):
-        print(my_letter, " n'est pas une lettre du mot caché")
+    if(test_letter==0):       
         error_count = error_count + 1
+        print(my_letter, ": mauvais choix,  %s/5 erreurs" %(error_count))
         logger.info("Nombre d'erreurs actuel")
         logger.info(error_count)
 
@@ -77,9 +94,14 @@ while error_count < 5 :
                 my_word_empty[compteur]=my_word_as_list[compteur]
         logger.info(my_word_empty)
 
+        word_complete = test_full_word(my_word_empty)
+ 
+
     my_word_empty_str=' '.join(map(str,my_word_empty))
     print(my_word_empty_str)
 
-        
 
-print("jeu perdu")
+if error_count>= 5:
+    print("jeu perdu")
+elif word_complete == 1 :
+    print("jeu gagné")
