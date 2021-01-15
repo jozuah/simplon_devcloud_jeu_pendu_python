@@ -46,25 +46,6 @@ test_letter=0
 word_complete=0
 max_error=5
 my_word_empty=[]
-
-#Fonction qui teste si une lettre est contenue dans un mot
-def test_letter_function(user_letter,game_word):
-    for i in game_word :
-        if i == user_letter:
-            logger.info("L'utilisateur a entré une lettre valide")
-            return 1
-    logger.info("L'utilisateur n'a pas entré une lettre valide")
-    return 0
-
-#Fonction qui test si le mot a cherché est completement trouvé
-def test_full_word (my_current_list):       
-    for item in my_current_list: 
-        if item == '_':
-            logger.info("Le mot n'a pas été trouvé totalement")
-            return 0
-    logger.info("Le mot a été trouvé totalement")
-    return 1
-
 HANGMANPICS = ['''
   +---+
   |   |
@@ -109,6 +90,33 @@ HANGMANPICS = ['''
       |
 =========''']
 
+#Fonction qui teste si une lettre est contenue dans un mot
+def test_letter_function(user_letter,game_word):
+    for i in game_word :
+        if i == user_letter:
+            logger.info("L'utilisateur a entré une lettre valide")
+            return 1
+    logger.info("L'utilisateur n'a pas entré une lettre valide")
+    return 0
+
+#Fonction qui test si le mot a cherché est completement trouvé
+def test_full_word (my_current_list):       
+    for item in my_current_list: 
+        if item == '_':
+            logger.info("Le mot n'a pas été trouvé totalement")
+            return 0
+    logger.info("Le mot a été trouvé totalement")
+    return 1
+
+#Fonction qui s'assure que l'utilisateur a mis une lettre
+def test_true_letter():
+    while True:
+        my_user_letter = input("\n\nEntrer une lettre:")
+        if my_user_letter.isalpha():
+            return my_user_letter
+        else:
+            print("Il faut vraiment entrer une lettre ...")
+
 #Initialisation d'une liste obtenue a partir du mot à chercher
 my_word_as_list=list(my_word)
 for i in range(len(my_word)):
@@ -127,7 +135,7 @@ logger.info(my_word)
 ###LE JEU : BOUCLE QUI TOURNE TANT QUE L'UTILISATEUR N'A PAS FAIT 5 ERREURS
 ### OU SI LE MOT N'A PAS ÉTÉ COMPLÈTEMENT TROUVÉ
 while (error_count < max_error) and (word_complete <1) :
-    my_letter = input("\n\nEntrer une lettre:")
+    my_letter = test_true_letter()
     logger.info("la lettre de l'user est:")
     logger.info(my_letter)
 
