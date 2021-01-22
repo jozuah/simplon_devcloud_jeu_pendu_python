@@ -1,0 +1,57 @@
+2021-01-20 12:45:19,876 :: INFO :: Start log
+2021-01-20 12:45:19,879 :: INFO :: le mot à trouver est:
+2021-01-20 12:45:19,879 :: INFO :: gallows
+2021-01-20 12:45:26,408 :: INFO :: l'input de l'user est:
+2021-01-20 12:45:26,408 :: INFO :: 34545
+2021-01-20 12:45:26,408 :: INFO :: L'utilisateur n'a pas entré une lettre'
+2021-01-20 12:45:29,662 :: INFO :: l'input de l'user est:
+2021-01-20 12:45:29,663 :: INFO :: dhgk
+2021-01-20 12:45:29,663 :: INFO :: L'utilisateur n'a pas entré une lettre'
+2021-01-20 12:45:44,323 :: INFO :: l'input de l'user est:
+2021-01-20 12:45:44,323 :: INFO :: y
+2021-01-20 12:45:44,323 :: INFO :: L'utilisateur a entré une lettre
+2021-01-20 12:45:44,324 :: INFO :: L'utilisateur n'a pas entré une lettre contenue dans le mot à trouver
+2021-01-20 12:45:44,324 :: INFO :: Nombre d'erreurs actuel
+2021-01-20 12:45:44,324 :: INFO :: 1
+2021-01-20 12:46:24,173 :: INFO :: l'input de l'user est:
+2021-01-20 12:46:24,173 :: INFO :: g
+2021-01-20 12:46:24,173 :: INFO :: L'utilisateur a entré une lettre
+2021-01-20 12:46:24,174 :: INFO :: L'utilisateur a entré une lettre valide contenue dans le mot à trouver
+2021-01-20 12:46:24,174 :: INFO :: ['g', '_', '_', '_', '_', '_', '_']
+2021-01-20 12:46:24,174 :: INFO :: Le mot n'a pas été trouvé totalement
+2021-01-20 12:46:27,785 :: INFO :: l'input de l'user est:
+2021-01-20 12:46:27,785 :: INFO :: l
+2021-01-20 12:46:27,786 :: INFO :: L'utilisateur a entré une lettre
+2021-01-20 12:46:27,786 :: INFO :: L'utilisateur a entré une lettre valide contenue dans le mot à trouver
+2021-01-20 12:46:27,786 :: INFO :: ['g', '_', 'l', 'l', '_', '_', '_']
+2021-01-20 12:46:27,786 :: INFO :: Le mot n'a pas été trouvé totalement
+2021-01-20 12:46:30,134 :: INFO :: l'input de l'user est:
+2021-01-20 12:46:30,134 :: INFO :: o
+2021-01-20 12:46:30,134 :: INFO :: L'utilisateur a entré une lettre
+2021-01-20 12:46:30,134 :: INFO :: L'utilisateur a entré une lettre valide contenue dans le mot à trouver
+2021-01-20 12:46:30,134 :: INFO :: ['g', '_', 'l', 'l', 'o', '_', '_']
+2021-01-20 12:46:30,134 :: INFO :: Le mot n'a pas été trouvé totalement
+2021-01-20 12:46:31,192 :: INFO :: l'input de l'user est:
+2021-01-20 12:46:31,193 :: INFO :: w
+2021-01-20 12:46:31,193 :: INFO :: L'utilisateur a entré une lettre
+2021-01-20 12:46:31,193 :: INFO :: L'utilisateur a entré une lettre valide contenue dans le mot à trouver
+2021-01-20 12:46:31,193 :: INFO :: ['g', '_', 'l', 'l', 'o', 'w', '_']
+2021-01-20 12:46:31,193 :: INFO :: Le mot n'a pas été trouvé totalement
+2021-01-20 12:46:32,820 :: INFO :: l'input de l'user est:
+2021-01-20 12:46:32,820 :: INFO :: s
+2021-01-20 12:46:32,820 :: INFO :: L'utilisateur a entré une lettre
+2021-01-20 12:46:32,820 :: INFO :: L'utilisateur a entré une lettre valide contenue dans le mot à trouver
+2021-01-20 12:46:32,820 :: INFO :: ['g', '_', 'l', 'l', 'o', 'w', 's']
+2021-01-20 12:46:32,820 :: INFO :: Le mot n'a pas été trouvé totalement
+2021-01-20 12:46:34,040 :: INFO :: l'input de l'user est:
+2021-01-20 12:46:34,040 :: INFO :: a
+2021-01-20 12:46:34,040 :: INFO :: L'utilisateur a entré une lettre
+2021-01-20 12:46:34,041 :: INFO :: L'utilisateur a entré une lettre valide contenue dans le mot à trouver
+2021-01-20 12:46:34,041 :: INFO :: ['g', 'a', 'l', 'l', 'o', 'w', 's']
+2021-01-20 12:46:34,041 :: INFO :: Le mot a été trouvé totalement
+2021-01-20 12:46:34,041 :: INFO :: Jeu gagné
+2021-01-20 12:46:34,041 :: INFO :: mot initial :
+2021-01-20 12:46:34,041 :: INFO :: gallows
+2021-01-20 12:46:34,041 :: INFO :: mot trouvé :
+2021-01-20 12:46:34,041 :: INFO :: g a l l o w s
+2021-01-20 12:46:34,041 :: INFO :: End log

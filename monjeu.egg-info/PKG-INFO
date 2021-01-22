@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: monjeu
+Version: 2.0.0
+Summary: blablabla3
+Home-page: blablabla2mongithub
+Author: Josh
+Author-email: blablabla
+License: UNKNOWN
+Description: Test du tuto package
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
